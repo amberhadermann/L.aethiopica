@@ -18,8 +18,7 @@ module load fastp
 module load BWA
 module load Java
 
-#REF=/PATH/TO/TriTrypDB-54_LaethiopicaL147_Genome.fasta
-
+REF= TriTrypDB-54_LaethiopicaL147_Genome.fasta
 
 # Combining gVCF files --> all samples into one vcf file
 gatk CombineGVCFs -R ${REF} -V 1123-81.vcf.gz -V 117-82.vcf.gz -V 130-83.vcf.gz -V 1464-85.vcf.gz -V 1561-80.vcf.gz -V 169-83.vcf.gz -V 32-83.vcf.gz -V 678-82.vcf.gz -V 68-83.vcf.gz -V 85-83.vcf.gz -V GEREcl7.vcf.gz -V L100.vcf.gz -V L100cl1.vcf.gz -V L127.vcf.gz -V L86.vcf.gz -V LEM2357.vcf.gz -V LEM2358cl3.vcf.gz -V LEM3464.vcf.gz -V LEM3469.vcf.gz -V LEM3469cl1.vcf.gz -V LEM3469cl5.vcf.gz -V LEM3469cl7.vcf.gz -V LEM3469cl8.vcf.gz -V LEM3469cl9.vcf.gz -V LEM3497.vcf.gz -V LEM3498.vcf.gz -V WANDERA.vcf.gz -O esembled_Aeth.vcf.gz
