@@ -1,3 +1,6 @@
+##Preparing AETH18 dataset
+bcftools view -a -s ^L100cl1,678_82 esembled_Aeth.GENO.SNP.GATKrecom.SNPCLUSTER.PASS.NOMISSING.DP5.GQ40.vcf.gz | bcftools view -e 'ALT=="."' - | bgzip > esembled_Aeth.18.NOL100cl1.NO678_82.vcf.gz 
+
 #ADMIXTURE:
 ##Preparing data files for admixture (vcf to bed to bim file)
 plink --vcf esembled_Aeth.18.NOL100cl1.NO678_82.vcf.gz --make-bed --out  esembled_Aeth.18.NOL100cl1.NO678_82 --allow-extra-chr
@@ -9,7 +12,6 @@ for K in 1 2 3 4 5 6 7 8 9 10; do admixture --cv  esembled_Aeth.18.NOL100cl1.NO6
 
 ##txt file with the CV errors listed for K1:10
 grep -h CV log*_NODUP.out > CV_NODUP.txt
-
 
 #LDdecay:
 ##Preparing data file for V3(K=5)
