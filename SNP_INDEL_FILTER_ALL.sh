@@ -21,7 +21,7 @@ module load fastp
 module load Java
 module load BioTools
 
-#REF=/PATH/TO/TriTrypDB-54_LaethiopicaL147_Genome.fasta
+#REF=TriTrypDB-54_LaethiopicaL147_Genome.fasta
 
 # Combining gVCF files --> all samples into one vcf file
 gatk CombineGVCFs -R ${REF} -V 103-83.vcf.gz -V 1123-81.vcf.gz -V 117-82.vcf.gz -V 130-83.vcf.gz -V 1464-85.vcf.gz -V 1561-87.vcf.gz -V 169-83.vcf.gz -V 32-83.vcf.gz -V 678-82.vcf.gz -V 68-83.vcf.gz -V 85-83.vcf.gz -V ERR1913337.vcf.gz -V ERR205814.vcf.gz -V ERR205815.vcf.gz -V ERR205816.vcf.gz -V ERR205817.vcf.gz -V ERR207776.vcf.gz -V ERR304754.vcf.gz -V ERR304759.vcf.gz -V ERR304762.vcf.gz -V ERR304763.vcf.gz -V ERR304766.vcf.gz -V GEREcl7.vcf.gz -V HUSSEN.vcf.gz -V L100.vcf.gz -V L100cl1.vcf.gz -V L127.vcf.gz -V L86.vcf.gz -V LEM2358cl3.vcf.gz -V LEM3464.vcf.gz -V LEM3469.vcf.gz -V LEM3469cl1.vcf.gz -V LEM3469cl5.vcf.gz -V LEM3469cl7.vcf.gz -V LEM3469cl8.vcf.gz -V LEM3469cl9.vcf.gz -V LEM3497.vcf.gz -V LEM3498.vcf.gz -V SRR1028158.vcf.gz -V ERR311388.vcf.gz -V WANDERA.vcf.gz -O esembled_ALL.vcf.gz
