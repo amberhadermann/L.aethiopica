@@ -18,11 +18,11 @@ module load BWA
 module load Java
 module load BioTools
 
-#REF=/PATH/TO/TriTrypDB-54_LaethiopicaL147_Genome.fasta
+REF=TriTrypDB-54_LaethiopicaL147_Genome.fasta
 #inputfile= list of isolate names (in loop when submitting script)
 
 ## Indexing the reference genome
-bwa index /scratch/antwerpen/207/vsc20703/Leishmania/Aethiopica/TriTrypDB-54_LaethiopicaL147_Genome.fasta
+bwa index ${REF}
 
 ## Mapping paired end reads against reference genome
 if find ${inputfile}_R2.fastq.gz;
