@@ -1,7 +1,8 @@
+#ADMIXTURE:
+
 ##Preparing AETH18 dataset
 bcftools view -a -s ^L100cl1,678_82 esembled_Aeth.GENO.SNP.GATKrecom.SNPCLUSTER.PASS.NOMISSING.DP5.GQ40.vcf.gz | bcftools view -e 'ALT=="."' - | bgzip > esembled_Aeth.18.NOL100cl1.NO678_82.vcf.gz 
 
-#ADMIXTURE:
 ##Preparing data files for admixture (vcf to bed to bim file)
 plink --vcf esembled_Aeth.18.NOL100cl1.NO678_82.vcf.gz --make-bed --out  esembled_Aeth.18.NOL100cl1.NO678_82 --allow-extra-chr
 awk '{$1=0;print $0}'  esembled_Aeth.18.NOL100cl1.NO678_82.bim >  esembled_Aeth.18.NOL100cl1.NO678_82.bim.tmp
